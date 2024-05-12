@@ -11,8 +11,9 @@ export default function Home() {
     <main>
       <div className="flex min-h-screen flex-col text-center items-center justify-center p-24 bg-gradient-to-r from-purple-600 to-blue-400 relative">
         <h1 className="font-bold text-5xl">Wisdom for the 21st century</h1>
+        <h2 className="mt-4">Tales by Eldar Sofer</h2>
         <div onClick={executeScroll} className="scrollWidget absolute bottom-6 cursor-pointer flex flex-col items-center">
-          <p>Scroll me</p>
+          <p>Dive in</p>
           <ArrowDown className="arrow" />
         </div>
       </div>

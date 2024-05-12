@@ -21,3 +21,11 @@ body {
   background: #888; 
   border-radius: 5px;
 }
+
+.scrollWidget > .arrow {
+  transition: 500ms;
+}
+
+.scrollWidget:hover > .arrow {
+  transform: translateY(4px);
+}

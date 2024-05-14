@@ -9,7 +9,7 @@ export default function Home() {
   const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   const firstPane = () => (
-      <div className="flex min-h-screen flex-col text-center items-center justify-center p-24 bg-gradient-to-r from-purple-600 to-blue-400 relative text-white">
+      <div className="flex min-h-screen flex-col text-center items-center justify-center p-24 relative text-white">
         <h1 className="font-bold text-5xl">
           Wisdom for the 21st century{" "}
         </h1>
@@ -61,7 +61,7 @@ export default function Home() {
   );
 
   return (
-    <main>
+    <main className="bg-gradient-to-tr from-purple-600 to-blue-500">
       {firstPane()}
       {secondPane()}
     </main>

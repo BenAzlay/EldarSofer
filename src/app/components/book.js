@@ -10,7 +10,7 @@ export default ({
     const [showBack, setShowBack] = useState(false);
     return (
         <div className="book-container" onClick={() => setShowBack(!showBack)}>
-            <div className="book" style={{ transform: showBack ? "rotateY(180deg)" : "" }}>
+            <div className="book" style={{ transform: showBack ? "rotateY(-180deg)" : "rotateY(0deg)" }}>
                 <div className="book-front">
                     <div className="stitches">
                         <Image className="book-img" src={coverImage} alt="master_guzi_cover" />

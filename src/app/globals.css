@@ -48,7 +48,7 @@ body {
 }
 
 .book-container {
-  perspective: 1000px;
+  perspective: 2500px;
   cursor: pointer;
 }
 

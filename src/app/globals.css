@@ -13,24 +13,24 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
   border-radius: 5px;
 }
 
 .scrollWidget {
-  transition: visibility 200ms linear,opacity 200ms linear;
+  transition: visibility 200ms linear, opacity 200ms linear;
 }
 
-.scrollWidget > .arrow {
+.scrollWidget>.arrow {
   transition: 500ms;
 }
 
-.scrollWidget:hover > .arrow {
+.scrollWidget:hover>.arrow {
   transform: translateY(4px);
 }
 
@@ -41,8 +41,98 @@ body {
   box-shadow: 5px 5px #3b3b3b10;
 }
 
-.textBox > #title {
+.textBox>#title {
   text-align: center;
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.book-container {
+  perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.book-container:hover .book {
+  transform: rotateY(180deg);
+}
+
+.book {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.book-front, .book-back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 50;
+	left: 50;
+
+  background-image: url(./assets/leather-texture.jpg);
+  background-size: cover;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 5px 5px #3b3b3b10;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: gold;
+  font-weight: 600;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+/* front pane, placed above back */
+.book-front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.book-back {
+	transform: rotateY(180deg);
+}
+
+.stitches {
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.book-img {
+  border-radius: 10px;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+  border: solid 1px brown;
+  margin-bottom: 12px;
+}
+
+.book-title {
+  font-size: 3rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.book-author {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.book-summary {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.read-button {
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-top: 12px;
+  border: 2px solid gold;
+  background-color: brown;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-align: center;
 }

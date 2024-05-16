@@ -49,12 +49,13 @@ body {
 
 .book-container {
   perspective: 1000px;
+  cursor: pointer;
 }
 
 /* flip the pane when hovered */
-.book-container:hover .book {
+/* .book-container:hover .book {
   transform: rotateY(180deg);
-}
+} */
 
 .book {
   transition: 0.6s;

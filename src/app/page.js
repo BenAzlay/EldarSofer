@@ -76,18 +76,18 @@ export default function Home() {
           <p>We live in an age full of intelligence: artificial intelligence, smart phones, smart cars, smart homes etc. But where is the <span className="italic">wisdom</span>?</p>
           <p>
             Technology evolved too fast, and wisdom didn't catch up yet. It's about time it does.
-            Tools like internet, AI or blockchain can bring us together, make us smart, safeguard our freedoms, but they can just as well create a dystopic future.
+            Tools like internet, AI or blockchain can bring us together, make us smart, safeguard our freedoms, but they can just as well create a dystopian future.
             It will all depend what we, the humans, make of them. Our intelligence creates the tools, and our wisdom should dictate how we use them.
           </p>
         </div>
         <div className="textBox">
           <h3 id="title">How?</h3>
           <p>
-            I write stories, because they put emotion and soul on otherwise cold ideas.
-            They say an image is worth a thousand word; I say a story is worth a thousand maxims.
+            I write stories because they give emotion and soul to otherwise cold ideas.
+            They say an image is worth a thousand words; likewise, a story is worth a thousand maxims.
             From one story, we each can draw our own unique interpretations and lessons that resonate with us.
             If the Ancients crafted myths to vehicule wisdom that was passed down countless generations, it's because stories are so powerful.
-            My tales are aimed at being like those myths, drawing new lessons from old times.
+            My tales aim at being like those myths, drawing new lessons from old times.
           </p>
         </div>
         <div className="textBox">

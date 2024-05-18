@@ -15,8 +15,8 @@ export default ({
                     <div className="stitches">
                         <Image className="book-img" src={coverImage} alt="master_guzi_cover" />
                         <div>
-                            <h1 className="book-title">{title}</h1>
-                            <h2 className="book-author">Eldar Sofer</h2>
+                            <h2 className="book-title">{title}</h2>
+                            <p className="book-author">Eldar Sofer</p>
                         </div>
                     </div>
                 </div>

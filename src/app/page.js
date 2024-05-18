@@ -90,7 +90,7 @@ export default function Home() {
             I write stories because they give emotion and soul to otherwise cold ideas.
             They say an image is worth a thousand words; likewise, a story is worth a thousand maxims.
             From one story, we each can draw our own unique interpretations and lessons that resonate with us.
-            If the Ancients crafted myths to vehicule wisdom that was passed down countless generations, it's because stories are so powerful.
+            If the Ancients crafted myths to vehicle wisdom that was passed down countless generations, it's because stories are so powerful.
             My tales aim at being like those myths, drawing new lessons from old times.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function Home() {
           <p>
             Around the 5th century BCE, something major happened: most of the world wisdom was written down. Everywhere, and all at once.
             In Greece, Socrates and Plato gave birth to Western philosophy; in Babylon, the exiled Judeans wrote the Torah; in Iran, Zarathustra was teaching the Avesta;
-            In India, the great Hindu epics were written and the Buddha came; in China, Confucius and Laozi shaped Chinese thought for milennia to come...
+            In India, the great Hindu epics were written and the Buddha came; in China, Confucius and Laozi shaped Chinese thought for millennia to come...
             This 5th century wisdom explosion event is called the Axial Age.
             What Socrates, Zarathustra or Laozi wrote still applies today, but they didn't have the internet, or AI, or globalization.
             So now is the time for the Axial Age 2.0! We should not replace ancient wisdom, but update it.

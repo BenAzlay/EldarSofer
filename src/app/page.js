@@ -56,6 +56,7 @@ export default function Home() {
     <div ref={myRef} className="text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-8">
         <span>Crafting Wisdom adapted to{" "}</span>
+        <br className="block sm:hidden" />
         <TypeAnimation
           sequence={[
             'the Information Age',
@@ -114,7 +115,7 @@ export default function Home() {
     <div className="min-h-screen text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-1">Read my stories</h2>
       <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {
           stories.map((story, index) =>
             <Book
@@ -142,7 +143,7 @@ export default function Home() {
       {firstPane()}
       {secondPane()}
       {thirdPane()}
-      <div className="min-h-screen text-start p-2 md:p-8 lg:p-12"></div>
+      {/* <div className="min-h-screen text-start p-2 md:p-8 lg:p-12"></div> */}
       {footer()}
     </main>
   );

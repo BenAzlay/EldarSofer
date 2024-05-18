@@ -61,16 +61,14 @@ body {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  aspect-ratio: 7/10;
+
 }
 
 /* hide back of pane during swap */
 .book-front, .book-back {
 	backface-visibility: hidden;
-
 	position: absolute;
-	top: 50;
-	left: 50;
-
   background-image: url(./assets/leather-texture.jpg);
   background-size: cover;
   box-shadow: 5px 5px #3b3b3b10;
@@ -78,6 +76,7 @@ body {
   color: gold;
   font-weight: 600;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+  height: 100%;
 }
 
 /* front pane, placed above back */
@@ -107,13 +106,14 @@ body {
 }
 
 .stitches {
+  height: 100%;
   border-color: #aaa;
   border-style: dashed;
-  aspect-ratio: 3/4;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2em;
+  overflow: hidden;
 }
 
 .book-img {
@@ -124,19 +124,21 @@ body {
 }
 
 .book-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   line-height: normal;
 }
 
 .book-author {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 .book-summary {
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  height: 100%;
+  overflow: overlay;
 }
 
 .read-button {

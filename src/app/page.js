@@ -3,11 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { ArrowDown } from "react-feather";
-import MasterGuziCover from "@/app/assets/Niu3.png";
 import Book from "./components/book";
+import CONSTANTS from "./constants";
 
 export default function Home() {
   const myRef = useRef(null);
+
+  const { stories } = CONSTANTS;
+  console.log("stories:", stories)
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -112,15 +115,18 @@ export default function Home() {
       <h2 className="font-bold text-2xl mb-1">Read my stories</h2>
       <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Book
-          title="Master Gu-Tzu"
-          summary="In Ancient China, renowned master Gu-Tzu can give pilgrims anything they desire.
-          A potion to cure any ailment of the body or soul, a sword to cut through steel like flesh, a mirror to reflect one's true self...
-          The old master alchemist could produce it all, never asking for any money in return.
-          Yet he does require something else in return, something seemingly benign, but perhaps more valuable than money, and much more powerful..."
-          pdfPath={"/Master_Guzi.pdf"}
-          coverImage={MasterGuziCover}
-        />
+        {
+          stories.map((story, index) =>
+            <Book
+              key={index}
+              title={story.title}
+              summary={story.summary}
+              pdfPath={story.pdfPath}
+              coverImage={story.coverImage}
+            />
+          )
+        }
+
       </div>
     </div>
   );

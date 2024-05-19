@@ -13,7 +13,7 @@ export default ({
             <div className="book" style={{ transform: showBack ? "rotateY(-180deg)" : "rotateY(0deg)" }}>
                 <div className="book-front">
                     <div className="stitches">
-                        <Image className="book-img" src={coverImage} alt="master_guzi_cover" />
+                        <Image className="book-img" src={coverImage} alt={`${title} cover`} />
                         <div>
                             <h2 className="book-title">{title}</h2>
                             <p className="book-author">Eldar Sofer</p>

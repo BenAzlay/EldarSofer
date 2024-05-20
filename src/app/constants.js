@@ -6,12 +6,12 @@ export default {
             pdfPath: "/Master_Guzi.pdf",
             coverImage: require('@/app/assets/MasterGuTzuCover.png'),
         },
-        // {
-        //     title: "Yantra",
-        //     summary: "",
-        //     pdfPath: "/Yantra.pdf",
-        //     coverImage: require('@/app/assets/YantraCover.png'),
-        // },
+        {
+            title: "Yantra",
+            summary: "In the great Indian kingdom of Magadha, people don't need to work anymore, as the Yantras, powerful and intelligent machines, were created to be better soldiers, farmers, doctors... Only the Brahmins haven't let the Yantras take their place, and hold absolute power by maintaining the people in debilitating idleness. Alone against the Brahmins, princess Gargi refuses to live an idle, meaningless life. But the Yantras won't make a rebellion easy...",
+            pdfPath: "/Yantra.pdf",
+            coverImage: require('@/app/assets/YantraCover.png'),
+        },
         // {
         //     title: "The Golden Prince",
         //     summary: "",

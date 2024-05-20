@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default ({
     title = "Story title",
@@ -8,9 +8,21 @@ export default ({
     coverImage,
 }) => {
     const [showBack, setShowBack] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
+    const [width, setWidth] = useState(window.innerWidth);
+
+    const handleWindowSizeChange = () => setWidth(window.innerWidth);
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => window.removeEventListener('resize', handleWindowSizeChange);
+    }, []);
+
+    const isMobile = useMemo(() => width <= 768, [width]);
+
     return (
-        <div className="book-container" onClick={() => setShowBack(!showBack)}>
-            <div className="book" style={{ transform: showBack ? "rotateY(-180deg)" : "rotateY(0deg)" }}>
+        <div className="book-container" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)} onClick={() => setShowBack(!showBack)}>
+            <div className="book" style={{ transform: showBack ? "rotateY(-180deg)" : (isHovering && !isMobile) ? "rotate3d(0.1, -1, 0, 8deg)" : "rotateY(0deg)" }}>
                 <div className="book-front">
                     <div className="stitches">
                         <Image className="book-img" src={coverImage} alt={`${title} cover`} />

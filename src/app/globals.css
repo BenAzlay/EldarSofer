@@ -62,7 +62,6 @@ body {
   transform-style: preserve-3d;
   position: relative;
   aspect-ratio: 7/10;
-
 }
 
 /* hide back of pane during swap */
@@ -136,7 +135,6 @@ body {
 
 .book-summary {
   text-align: left;
-  font-size: 1rem;
   height: 100%;
   overflow: overlay;
 }

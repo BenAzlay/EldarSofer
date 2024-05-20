@@ -9,7 +9,7 @@ export default ({
 }) => {
     const [showBack, setShowBack] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(0);
 
     const handleWindowSizeChange = () => setWidth(window.innerWidth);
 

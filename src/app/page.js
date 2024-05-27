@@ -27,6 +27,13 @@ export default function Home() {
     };
   }, []);
 
+  const sendEmail = async () => {
+    const success = await fetch("/api/send", {
+      method: "POST",
+    });
+    console.log("success:", success)
+  };
+
   const scrollWidgetVisible = useMemo(() => scrollPosition <= 20, [scrollPosition]);
 
   const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });

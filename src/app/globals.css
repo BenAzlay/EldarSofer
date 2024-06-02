@@ -68,11 +68,12 @@ body {
 .book-front, .book-back {
 	backface-visibility: hidden;
 	position: absolute;
-  background-image: url(./assets/leather-texture.jpg);
+  background-color: #0028ff;
+  background-image: url(./assets/dark-leather.png);
   background-size: cover;
   box-shadow: 5px 5px #3b3b3b10;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: gold;
+  color: #ffd700;
   font-weight: 600;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
   height: 100%;
@@ -118,7 +119,7 @@ body {
 .book-img {
   border-radius: 10px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
-  border: solid 1px #182F59;
+  border: solid 1px #0021de;
   margin-bottom: 12px;
 }
 
@@ -144,7 +145,7 @@ body {
   padding: 6px 12px;
   margin-top: 12px;
   border: 2px solid gold;
-  background-color: #182F59;
+  background-color: #0021de;
   border-radius: 10px;
   font-size: 1.25rem;
   text-align: center;

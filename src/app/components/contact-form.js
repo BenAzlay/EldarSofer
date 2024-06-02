@@ -72,7 +72,7 @@ export default ({
                 placeholder="Dear Eldar Sofer..."
             />
             <button
-                onClick={onClickSend}
+                onClick={() => onClickSend()}
                 disabled={
                     !emailIsValid ||
                     !name.length ||

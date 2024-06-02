@@ -135,7 +135,7 @@ export default function Home() {
   const contactPane = () => (
     <div className="min-h-screen text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-1">Contact me</h2>
-      <p className="text-gray-100 mb-8">Have any feedback? Wish to collaborate? Don't hesitate to ping me!</p>
+      <p className="text-gray-100 mb-8">Have any feedback about my stories? Wish to collaborate? Don't hesitate to reach out!</p>
       <ContactForm />
     </div>
   );

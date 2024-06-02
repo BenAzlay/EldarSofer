@@ -1,9 +1,13 @@
 import * as React from 'react';
 
 export const EmailTemplate = ({
-  firstName,
+  content,
+  name,
+  fromEmail,
 }) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
+    <p>You received a message from: {name}</p>
+    <p>Email: {fromEmail}</p>
+    <p>{content}</p>
   </div>
 );

@@ -5,12 +5,12 @@ import { TypeAnimation } from 'react-type-animation';
 import { ArrowDown } from "react-feather";
 import Book from "./components/book";
 import CONSTANTS from "./constants";
+import ContactForm from "./components/contact-form";
 
 export default function Home() {
   const myRef = useRef(null);
 
   const { stories } = CONSTANTS;
-  console.log("stories:", stories)
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -26,13 +26,6 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const sendEmail = async () => {
-    const success = await fetch("/api/send", {
-      method: "POST",
-    });
-    console.log("success:", success)
-  };
 
   const scrollWidgetVisible = useMemo(() => scrollPosition <= 20, [scrollPosition]);
 
@@ -139,6 +132,14 @@ export default function Home() {
     </div>
   );
 
+  const contactPane = () => (
+    <div className="min-h-screen text-start p-2 md:p-8 lg:p-12">
+      <h2 className="font-bold text-2xl mb-1">Contact me</h2>
+      <p className="text-gray-100 mb-8">Have any feedback? Wish to collaborate? Don't hesitate to ping me!</p>
+      <ContactForm />
+    </div>
+  );
+
   const footer = () => (
     <div className="bg-blue-600 rounded-t-lg px-12 py-6">
       Copyright © 2024 Eldar Sofer
@@ -150,6 +151,7 @@ export default function Home() {
       {firstPane()}
       {secondPane()}
       {thirdPane()}
+      {contactPane()}
       {/* <div className="min-h-screen text-start p-2 md:p-8 lg:p-12"></div> */}
       {footer()}
     </main>

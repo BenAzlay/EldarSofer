@@ -52,7 +52,7 @@ export default function Home() {
     </div>
   );
 
-  const secondPane = () => (
+  const explanationPane = () => (
     <div ref={myRef} className="text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-8">
         <span>Crafting Wisdom adapted to{" "}</span>
@@ -111,7 +111,7 @@ export default function Home() {
     </div>
   );
 
-  const thirdPane = () => (
+  const storiesPane = () => (
     <div className="min-h-screen text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-1">Read my stories</h2>
       <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
@@ -149,8 +149,8 @@ export default function Home() {
   return (
     <main className="bg-gradient-to-tr from-purple-600 to-blue-500">
       {firstPane()}
-      {secondPane()}
-      {thirdPane()}
+      {explanationPane()}
+      {storiesPane()}
       {contactPane()}
       {/* <div className="min-h-screen text-start p-2 md:p-8 lg:p-12"></div> */}
       {footer()}

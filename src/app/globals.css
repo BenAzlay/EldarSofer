@@ -6,6 +6,10 @@ body {
   color: #FFF;
 }
 
+button {
+  background-color: #0021de;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

@@ -80,7 +80,7 @@ export default ({
                     messageSent ||
                     sendloading
                 }
-                className="bg-blue-500 p-2 rounded-lg font-bold disabled:bg-gray-200"
+                className="p-2 rounded-lg font-bold disabled:bg-gray-200"
             >
                 {messageSent ? "Message sent" : sendloading ? "Sending message..." : "Send message"}
             </button>

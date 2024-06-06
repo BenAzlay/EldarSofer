@@ -80,8 +80,8 @@ export default function Home() {
           <p>We live in an age full of intelligence: artificial intelligence, smart phones, smart cars, smart homes etc. But where is the <span className="italic">wisdom</span>?</p>
           <p>
             Technology evolved too fast, and wisdom didn't catch up yet. It's about time it does.
-            Tools like internet, AI or blockchain can bring us together, make us smart, safeguard our freedoms, but they can just as well create a dystopian future.
-            It will all depend what we, the humans, make of them. Our intelligence creates the tools, and our wisdom should dictate how we use them.
+            Tools like the Internet, AI or blockchain can bring us together, make us smart, safeguard our freedoms, but they can just as well create a dystopian future if we don't use them wisely.
+            Our intelligence creates the tools, and our wisdom should dictate how we use them.
           </p>
         </div>
         <div className="textBox">

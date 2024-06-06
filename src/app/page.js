@@ -80,7 +80,7 @@ export default function Home() {
           <p>We live in an age full of intelligence: artificial intelligence, smart phones, smart cars, smart homes etc. But where is the <span className="italic">wisdom</span>?</p>
           <p>
             Technology evolved too fast, and wisdom didn't catch up yet. It's about time it does.
-            Tools like the Internet, AI or blockchain can bring us together, make us smart, safeguard our freedoms, but they can just as well create a dystopian future if we don't use them wisely.
+            Tools like the Internet, AI or Blockchain can bring us together, make us smarter and safeguard our freedoms, but they can just as well create a dystopian future if we don't use them wisely.
             Our intelligence creates the tools, and our wisdom should dictate how we use them.
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function Home() {
             In Greece, Socrates and Plato gave birth to Western philosophy; in Babylon, the exiled Judeans wrote the Torah; in Iran, Zarathustra was teaching the Avesta;
             In India, the great Hindu epics were written and the Buddha came; in China, Confucius and Laozi shaped Chinese thought for millennia to come...
             This 5th century wisdom explosion event is called the Axial Age.
-            What Socrates, Zarathustra or Laozi wrote still applies today, but they didn't have the internet, or AI, or globalization.
+            What Socrates, Zarathustra or Laozi wrote still applies today, but they didn't have the Internet, or AI, or globalization.
             So now is the time for the Axial Age 2.0! We should not replace ancient wisdom, but update it.
             Through my tales, I hope to contribute to this Axial Age 2.0.
           </p>

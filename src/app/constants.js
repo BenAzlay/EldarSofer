@@ -12,11 +12,11 @@ export default {
             pdfPath: "/Yantra.pdf",
             coverImage: require('@/app/assets/YantraCover.png'),
         },
-        // {
-        //     title: "The Golden Prince",
-        //     summary: "",
-        //     pdfPath: "/The_Golden_Prince.pdf",
-        //     coverImage: require('@/app/assets/GoldenPrinceCover.png'),
-        // },
+        {
+            title: "The Golden Prince",
+            summary: "The fabulously rich ruler of Mali, Mansa Musa, gives away gold in abundance to everyone on his way to Mecca. But his young son, prince Maghan, senses this gold won't make people happy for long...",
+            pdfPath: "/The_Golden_Prince.pdf",
+            coverImage: require('@/app/assets/GoldenPrinceCover.png'),
+        },
     ],
 };

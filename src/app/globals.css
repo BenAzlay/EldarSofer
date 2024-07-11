@@ -154,3 +154,17 @@ button {
   font-size: 1.25rem;
   text-align: center;
 }
+
+.logo-cta {
+  width: 3rem;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.logo-cta:hover {
+  transform: rotate(180deg);
+}
+

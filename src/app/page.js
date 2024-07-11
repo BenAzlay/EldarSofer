@@ -6,6 +6,8 @@ import { ArrowDown } from "react-feather";
 import Book from "./components/book";
 import CONSTANTS from "./constants";
 import ContactForm from "./components/contact-form";
+import Image from "next/image";
+import LogoCta from "./components/logo-cta";
 
 export default function Home() {
   const myRef = useRef(null);
@@ -142,7 +144,11 @@ export default function Home() {
 
   const footer = () => (
     <div className="bg-blue-600 rounded-t-lg px-12 py-6">
-      Copyright © 2024 Eldar Sofer
+      <div className="grid grid-cols-4 gap-4 max-w-fit items-center mb-4">
+        <LogoCta src={require('@/app/assets/substack.png')} url={"https://eldarsofer.substack.com/"} alt="substack" title={"Read my Substack articles"} />
+        <LogoCta src={require('@/app/assets/suno.png')} url={"https://suno.com/@eldarsofer"} alt="suno" title={"Listen to my AI-generated songs"} />
+      </div>
+      <p>Copyright © 2024 Eldar Sofer</p>
     </div>
   );
 

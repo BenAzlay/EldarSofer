@@ -10,11 +10,12 @@ export default ({
 
     return (
         <div className={props.className}>
-            <label for="price" className="block text-sm font-medium leading-6 mb-1">
+            <label htmlFor="field" className="block text-sm font-medium leading-6 mb-1">
                 {label}{" "}
                 <span className="!text-xs p-1 bg-gray-500 rounded-md">{value.length}/{maxLength}</span>
             </label>
             <textarea
+                id="field"
                 type={type}
                 value={value}
                 onChange={onChange}

@@ -2,15 +2,16 @@
 "use client";;
 import { useEffect, useMemo, useRef, useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
-import { ArrowDown } from "react-feather";
+import { ArrowDown, BookOpen } from "react-feather";
 import Book from "./components/book";
 import CONSTANTS from "./constants";
 import ContactForm from "./components/contact-form";
-import Image from "next/image";
 import LogoCta from "./components/logo-cta";
+import Image from "next/image";
 
 export default function Home() {
-  const myRef = useRef(null);
+  const secondPaneRef = useRef(null);
+  const storiesPaneRef = useRef(null);
 
   const { stories } = CONSTANTS;
 
@@ -31,11 +32,11 @@ export default function Home() {
 
   const scrollWidgetVisible = useMemo(() => scrollPosition <= 20, [scrollPosition]);
 
-  const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const executeScroll = (ref) => ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   const scrollWidget = () => (
     <div
-      onClick={executeScroll}
+      onClick={() => executeScroll(secondPaneRef)}
       style={{ visibility: scrollWidgetVisible ? "visible" : "hidden", opacity: scrollWidgetVisible ? 1 : 0 }}
       className="scrollWidget absolute bottom-6 cursor-pointer flex flex-col items-center"
     >
@@ -46,16 +47,30 @@ export default function Home() {
 
   const firstPane = () => (
     <div className="flex min-h-screen flex-col text-center items-center justify-center p-1 relative text-white">
-      <h1 className="font-bold text-5xl">
-        Wisdom for the 21st century{" "}
+      <h1 className="font-bold text-5xl mb-2">
+        Wisdom for a New Age{" "}
       </h1>
-      <h2 className="mt-4">Stories by Eldar Sofer</h2>
+      <h2 className="mb-8 opacity-90">by Eldar Sofer</h2>
+      <div className="grid grid-cols-3 gap-6 sm:gap-12 justify-items-center font-medium text-lg">
+        <div onClick={() => executeScroll(storiesPaneRef)} className="flex items-center cursor-pointer">
+          <span className="w-6 mr-1">📘</span>
+          <span>Stories</span>
+        </div>
+        <a className="flex items-center" href={"https://eldarsofer.substack.com"} target="_blank">
+          <Image className="w-6 mr-1" src={require('@/app/assets/substack.png')} alt="substack" />
+          <span>Articles</span>
+        </a>
+        <a className="flex items-center" href={"https://suno.com/@eldarsofer"} target="_blank">
+          <Image className="w-6 mr-1" src={require('@/app/assets/suno.png')} alt="suno" />
+          <span>Songs</span>
+        </a>
+      </div>
       {scrollWidget()}
     </div>
   );
 
   const explanationPane = () => (
-    <div ref={myRef} className="text-start p-2 md:p-8 lg:p-12">
+    <div ref={secondPaneRef} className="text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-8">
         <span>Crafting Wisdom adapted to{" "}</span>
         <br className="block sm:hidden" />
@@ -114,7 +129,7 @@ export default function Home() {
   );
 
   const storiesPane = () => (
-    <div className="min-h-screen text-start p-2 md:p-8 lg:p-12">
+    <div ref={storiesPaneRef} className="min-h-screen text-start p-2 md:p-8 lg:p-12">
       <h2 className="font-bold text-2xl mb-1">Read my stories</h2>
       <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

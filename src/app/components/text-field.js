@@ -11,8 +11,9 @@ export default ({
 
     return (
         <div className={props.className}>
-            <label for="price" className="block text-sm font-medium leading-6 mb-1">{label}</label>
+            <label htmlFor="field" className="block text-sm font-medium leading-6 mb-1">{label}</label>
             <input
+                id="field"
                 type={type}
                 value={value}
                 onChange={onChange}

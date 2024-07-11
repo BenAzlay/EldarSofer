@@ -7,8 +7,8 @@ const inter = Ubuntu({
 });
 
 export const metadata = {
-  title: "Eldar Sofer | Wisdom for the 21st century",
-  description: "Writing tales to bring wisdom to the modern age",
+  title: "Eldar Sofer | Wisdom for a New Age",
+  description: "Writing tales to bring wisdom to the 21st century",
 };
 
 export default function RootLayout({ children }) {

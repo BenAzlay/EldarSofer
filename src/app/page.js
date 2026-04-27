@@ -46,24 +46,31 @@ export default function Home() {
   );
 
   const firstPane = () => (
-    <div className="flex min-h-screen flex-col text-center items-center justify-center p-1 relative text-white">
-      <h1 className="font-bold text-3xl sm:text-5xl mb-2">
-        Wisdom for Our Age{" "}
+    <div className="flex min-h-screen flex-col text-center items-center justify-center relative text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.12)_0%,_transparent_65%)] pointer-events-none" />
+      <h1 className="font-bold text-3xl sm:text-5xl mb-3 tracking-tight">
+        Wisdom for Our Age
       </h1>
-      <h2 className="mb-8 opacity-90 text-sm sm:text-base">by Eldar Sofer</h2>
-      <div className="grid grid-cols-3 gap-6 sm:gap-12 justify-items-center font-medium text-lg">
-        <div onClick={() => executeScroll(storiesPaneRef)} className="flex items-center cursor-pointer">
-          <span className="w-6 mr-1">📘</span>
-          <span>Stories</span>
+      <div className="flex items-center gap-3 mb-10 opacity-75">
+        <span className="h-px w-8 bg-white" />
+        <span className="text-xs sm:text-sm tracking-widest uppercase">by Eldar Sofer</span>
+        <span className="h-px w-8 bg-white" />
+      </div>
+      <div className="flex flex-col gap-3 font-medium">
+        <div onClick={() => executeScroll(storiesPaneRef)} className="flex items-center justify-center gap-2 cursor-pointer border border-white/40 rounded-full px-6 py-2.5 hover:bg-white/10 transition-colors w-full">
+          <BookOpen size={16} />
+          <span>Read my stories</span>
         </div>
-        <a className="flex items-center" href={"https://eldarsofer.substack.com"} target="_blank">
-          <Image className="w-6 mr-1" src={require('@/app/assets/substack.png')} alt="substack" />
-          <span>Articles</span>
-        </a>
-        <a className="flex items-center" href={"https://suno.com/@eldarsofer"} target="_blank">
-          <Image className="w-6 mr-1" src={require('@/app/assets/suno.png')} alt="suno" />
-          <span>Songs</span>
-        </a>
+        <div className="flex gap-3">
+          <a className="flex flex-1 items-center justify-center gap-2 border border-white/40 rounded-full px-4 py-2 hover:bg-white/10 transition-colors" href={"https://eldarsofer.substack.com"} target="_blank">
+            <Image className="w-5 h-5 object-contain" src={require('@/app/assets/substack.png')} alt="substack" />
+            <span>Articles</span>
+          </a>
+          <a className="flex flex-1 items-center justify-center gap-2 border border-white/40 rounded-full px-4 py-2 hover:bg-white/10 transition-colors" href={"https://suno.com/@eldarsofer"} target="_blank">
+            <Image className="w-4 h-4 object-contain" src={require('@/app/assets/suno.png')} alt="suno" />
+            <span>Songs</span>
+          </a>
+        </div>
       </div>
       {scrollWidget()}
     </div>
@@ -138,7 +145,7 @@ export default function Home() {
   );
 
   const storiesPane = () => (
-    <div ref={storiesPaneRef} className="min-h-screen text-start px-4 py-8 md:py-12">
+    <div ref={storiesPaneRef} className="text-start px-4 py-8 md:py-12">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-bold text-xl md:text-2xl mb-1">Read my stories</h2>
         <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
@@ -160,7 +167,7 @@ export default function Home() {
   );
 
   const contactPane = () => (
-    <div className="min-h-screen text-start px-4 py-8 md:py-12">
+    <div className="text-start px-4 py-8 md:py-12">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-bold text-xl md:text-2xl mb-1">Contact me</h2>
         <p className="text-gray-100 mb-8">Have any feedback about my stories? Wish to collaborate? Don't hesitate to reach out!</p>

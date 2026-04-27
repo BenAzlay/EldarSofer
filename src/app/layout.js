@@ -7,8 +7,21 @@ const inter = Ubuntu({
 });
 
 export const metadata = {
-  title: "Eldar Sofer | Wisdom for a New Age",
-  description: "Writing tales to bring wisdom to the 21st century",
+  title: "Eldar Sofer | Wisdom for Our Age",
+  description: "Wisdom stories for the 21st century, by author Eldar Sofer.",
+  authors: [{ name: "Eldar Sofer" }],
+  openGraph: {
+    title: "Eldar Sofer | Wisdom for Our Age",
+    description: "Wisdom stories for the 21st century, by author Eldar Sofer.",
+    url: "https://eldarsofer.com",
+    siteName: "Eldar Sofer",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eldar Sofer | Wisdom for Our Age",
+    description: "Wisdom stories for the 21st century, by author Eldar Sofer.",
+  },
 };
 
 export default function RootLayout({ children }) {

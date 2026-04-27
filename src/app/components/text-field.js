@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 export default ({
     value,
     onChange = () => { },
@@ -8,19 +10,24 @@ export default ({
     maxLength = 80,
     ...props
 }) => {
+    const id = useId();
 
     return (
         <div className={props.className}>
-            <label htmlFor="field" className="block text-sm font-medium leading-6 mb-1">{label}</label>
+            <label htmlFor={id} className="block text-sm font-medium mb-1.5">{label}</label>
             <input
-                id="field"
+                id={id}
                 type={type}
                 value={value}
                 onChange={onChange}
                 maxLength={maxLength}
-                className={`shadow-sm rounded-lg break-normal text-gray-900 m-0 w-full focus:ring-2 ${error ? "border-red-600 focus:ring-red-200" : "border-gray-300 focus:ring-indigo-200"}`}
+                className={`bg-white/10 border rounded-xl text-white placeholder:text-white/40 w-full px-4 py-2.5 focus:outline-none focus:ring-2 transition-all ${
+                    error
+                        ? "border-red-400/70 focus:ring-red-400/30 focus:border-red-400"
+                        : "border-white/25 focus:ring-white/20 focus:border-white/50"
+                }`}
                 placeholder={placeholder}
             />
         </div>
-    )
+    );
 }

@@ -63,7 +63,7 @@ export default ({
                 <TextField value={name} onChange={onChangeName} maxLength={50} label="Your name" placeholder="George Orwell" />
                 <TextField value={email} onChange={onChangeEmail} error={email.length > 0 && !emailIsValid} type="email" label="Your email" placeholder="orwell@example.com" />
             </div>
-            <TextField value={subject} onChange={onChangeSubject} type="text" label="Subject" placeholder="I think a Yantra would write better stories than you" />
+            <TextField value={subject} onChange={onChangeSubject} type="text" label="Subject" placeholder="Healing the world" />
             <TextareaField
                 value={content}
                 onChange={onChangeContent}

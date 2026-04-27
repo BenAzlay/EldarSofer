@@ -47,10 +47,10 @@ export default function Home() {
 
   const firstPane = () => (
     <div className="flex min-h-screen flex-col text-center items-center justify-center p-1 relative text-white">
-      <h1 className="font-bold text-5xl mb-2">
-        Wisdom for a New Age{" "}
+      <h1 className="font-bold text-3xl sm:text-5xl mb-2">
+        Wisdom for Our Age{" "}
       </h1>
-      <h2 className="mb-8 opacity-90">by Eldar Sofer</h2>
+      <h2 className="mb-8 opacity-90 text-sm sm:text-base">by Eldar Sofer</h2>
       <div className="grid grid-cols-3 gap-6 sm:gap-12 justify-items-center font-medium text-lg">
         <div onClick={() => executeScroll(storiesPaneRef)} className="flex items-center cursor-pointer">
           <span className="w-6 mr-1">📘</span>
@@ -70,8 +70,9 @@ export default function Home() {
   );
 
   const explanationPane = () => (
-    <div ref={secondPaneRef} className="text-start p-2 md:p-8 lg:p-12">
-      <h2 className="font-bold text-2xl mb-8">
+    <div ref={secondPaneRef} className="text-start px-4 py-8 md:py-12">
+      <div className="max-w-5xl mx-auto">
+      <h2 className="font-bold text-xl md:text-2xl mb-8">
         <span>Crafting Wisdom adapted to{" "}</span>
         <br className="block sm:hidden" />
         <TypeAnimation
@@ -83,6 +84,14 @@ export default function Home() {
             'Blockchain',
             1000,
             'Mass Media',
+            1000,
+            'Social Media',
+            1000,
+            'Globalization',
+            1000,
+            'Big Data',
+            1000,
+            'Surveillance',
             1000
           ]}
           wrapper="span"
@@ -91,7 +100,7 @@ export default function Home() {
           repeat={Infinity}
         />
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="flex flex-col gap-6">
         <div className="textBox">
           <h3 id="title">Why?</h3>
           <p>We live in an age full of intelligence: artificial intelligence, smart phones, smart cars, smart homes etc. But where is the <span className="italic">wisdom</span>?</p>
@@ -124,46 +133,51 @@ export default function Home() {
           </p>
         </div>
       </div>
-
+      </div>
     </div>
   );
 
   const storiesPane = () => (
-    <div ref={storiesPaneRef} className="min-h-screen text-start p-2 md:p-8 lg:p-12">
-      <h2 className="font-bold text-2xl mb-1">Read my stories</h2>
-      <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {
-          stories.map((story, index) =>
-            <Book
-              key={index}
-              title={story.title}
-              summary={story.summary}
-              pdfPath={story.pdfPath}
-              coverImage={story.coverImage}
-            />
-          )
-        }
-
+    <div ref={storiesPaneRef} className="min-h-screen text-start px-4 py-8 md:py-12">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="font-bold text-xl md:text-2xl mb-1">Read my stories</h2>
+        <p className="text-gray-100 mb-8">A few stories I can share. More are on the way...</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {
+            stories.map((story, index) =>
+              <Book
+                key={index}
+                title={story.title}
+                summary={story.summary}
+                pdfPath={story.pdfPath}
+                coverImage={story.coverImage}
+              />
+            )
+          }
+        </div>
       </div>
     </div>
   );
 
   const contactPane = () => (
-    <div className="min-h-screen text-start p-2 md:p-8 lg:p-12">
-      <h2 className="font-bold text-2xl mb-1">Contact me</h2>
-      <p className="text-gray-100 mb-8">Have any feedback about my stories? Wish to collaborate? Don't hesitate to reach out!</p>
-      <ContactForm />
+    <div className="min-h-screen text-start px-4 py-8 md:py-12">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="font-bold text-xl md:text-2xl mb-1">Contact me</h2>
+        <p className="text-gray-100 mb-8">Have any feedback about my stories? Wish to collaborate? Don't hesitate to reach out!</p>
+        <ContactForm />
+      </div>
     </div>
   );
 
   const footer = () => (
-    <div className="bg-blue-600 rounded-t-lg px-12 py-6">
-      <div className="grid grid-cols-4 gap-4 max-w-fit items-center mb-4">
-        <LogoCta src={require('@/app/assets/substack.png')} url={"https://eldarsofer.substack.com/"} alt="substack" title={"Read my Substack articles"} />
-        <LogoCta src={require('@/app/assets/suno.png')} url={"https://suno.com/@eldarsofer"} alt="suno" title={"Listen to my AI-generated songs"} />
+    <div className="bg-blue-600 rounded-t-lg px-4 py-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-4 gap-4 max-w-fit items-center mb-4">
+          <LogoCta src={require('@/app/assets/substack.png')} url={"https://eldarsofer.substack.com/"} alt="substack" title={"Read my Substack articles"} />
+          <LogoCta src={require('@/app/assets/suno.png')} url={"https://suno.com/@eldarsofer"} alt="suno" title={"Listen to my AI-generated songs"} />
+        </div>
+        <p>Copyright © 2024 Eldar Sofer</p>
       </div>
-      <p>Copyright © 2024 Eldar Sofer</p>
     </div>
   );
 

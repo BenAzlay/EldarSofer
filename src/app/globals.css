@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width: 768px) {
+  .textBox {
+    padding: 20px 24px;
+  }
+}
+
 body {
   color: #FFF;
 }
@@ -39,16 +45,24 @@ button {
 }
 
 .textBox {
-  padding: 12px;
-  border: #FFF solid 2px;
-  border-radius: 10px;
-  box-shadow: 5px 5px #3b3b3b10;
+  padding: 14px 16px;
+  border: rgba(255, 255, 255, 0.4) solid 1px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  line-height: 1.75;
+}
+
+.textBox p + p {
+  margin-top: 12px;
 }
 
 .textBox>#title {
   text-align: center;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
 }
 
 .book-container {

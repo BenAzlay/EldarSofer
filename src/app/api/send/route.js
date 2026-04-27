@@ -38,7 +38,8 @@ export async function POST(req) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         const toEmail = process.env.DESTINATION_EMAIL.toString();
         const { data, error } = await resend.emails.send({
-            from: `${name} <${fromEmail}>`,
+            from: `${name} <noreply@eldarsofer.com>`,
+            replyTo: fromEmail,
             to: [toEmail],
             subject,
             react: EmailTemplate({ content, fromEmail, name }),
